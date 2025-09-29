@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="why_it_doesnt_work" model="ir.module.category">
+        <field name="name">Real Estate</field>
+        <field name="description">Groups related to Real Estate module.</field>
+        <field name="sequence">125</field>
+<!--        <field name="parent_id" ref="real_estate_bipro"/>-->
+    </record>
+</odoo>

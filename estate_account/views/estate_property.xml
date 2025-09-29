@@ -1,0 +1,13 @@
+<odoo>
+    <record id="estate_property_form_inherit_invoice" model="ir.ui.view">
+        <field name="name">estate.property.form.inherit.invoice</field>
+        <field name="model">estate.property</field>
+        <field name="inherit_id" ref="Real_estate_bipro.estate_property_form"/>
+        <field name="arch" type="xml">
+            <!-- Place the invoice_id field after selling_price field -->
+            <xpath expr="//group//field[@name='selling_price']" position="after">
+                <field name="invoice_id" readonly="1"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

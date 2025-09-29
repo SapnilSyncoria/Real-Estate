@@ -1,0 +1,55 @@
+<odoo>
+    <!-- List View for Offers -->
+    <record id="view_property_offer_list" model="ir.ui.view">
+        <field name="name">estate.property.offer.list</field>
+        <field name="model">estate.property.offer</field>
+        <field name="arch" type="xml">
+            <list editable = "top" decoration-success="status == 'accepted'"
+                  decoration-danger="status == 'refused'">
+
+                <field name="price"/>
+                <field name="partner_id"/>
+
+                <field name="validity"/>
+                <field name="date_deadline"/>
+                <field name="property_type_id" widget="many2one_avatar"/>
+
+                <button name="status_accepted" type="object" icon="fa-check" title="Accept" invisible ="status in ['accepted', 'refused']"/>
+                <button name="status_refused" type="object" icon="fa-times" title="Cancel" invisible ="status in ['accepted','refused']"/>
+
+                <field name="status"/>
+
+            </list>
+        </field>
+    </record>
+
+    <!-- Form View for Offers -->
+    <record id="view_property_offer_form" model="ir.ui.view">
+        <field name="name">estate.property.offer.form</field>
+        <field name="model">estate.property.offer</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="price"/>
+                        <field name="partner_id"/>
+
+                        <field name="validity"/>
+                        <header>
+                            <button name="status_accepted" string="Accepted" type="object" icon="fa-check"
+                                 invisible="status in ['accepted','refused']"/>
+                            <button name="status_refused" string="Refused" type="object" icon="fa-times"
+                                 invisible="status in ['accepted','refused']"/>
+                        </header>
+                        <field name="date_deadline"/>
+                        <field name="status"/>
+
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+
+</odoo>

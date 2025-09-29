@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- Form view for Property Types -->
+    <record id="view_property_type_form" model="ir.ui.view">
+        <field name="name">estate.property.type.form</field>
+        <field name="model">estate.property.type</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <div name="button_box">
+                        <button class="oe_stat_button"
+                                type="object"
+                                name="action_view_offers"
+                                icon="fa-list">
+                            <field name="offer_counts" string="Offers" widget="statinfo"/>
+                        </button>
+                    </div>
+
+
+                    <group>
+                        <field name="type_estate_properties"
+                               class="oe_edit_only o_text_bold"
+                               style="font-size:36px;"
+                               nolabel="1"
+                        />
+                        <field name="offer_counts"/>
+
+
+                    </group>
+                    <group>
+                        <field name="sequence"/>
+
+                    </group>
+
+                    <!-- Inline One2many list -->
+                    <notebook>
+                        <page string="Properties">
+                            <field name="property_ids">
+
+                                <list editable="bottom">
+
+                                    <field name="name"/>
+                                    <field name="expected_price"/>
+                                    <field name="status"/>
+                                </list>
+
+                            </field>
+
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Action -->
+    <record id="estate_property_action2" model="ir.actions.act_window">
+        <field name="name">Property Types</field>
+        <field name="res_model">estate.property.type</field>
+        <field name="view_mode">kanban,list,form</field>
+    </record>
+
+
+</odoo>

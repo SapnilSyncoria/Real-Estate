@@ -1,0 +1,22 @@
+<odoo>
+    <record id="view_order_form_inherit_invoice_link" model="ir.ui.view">
+        <field name="name">sale.order.form.inherit.invoice.link</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <field name="date_order" position="after">
+                <field name="invoice_id" readonly="1" force_save = "1"/>
+                <field name="total_discount_2"/>
+            </field>
+            <field name="partner_id" position="after">
+                <field name="discount_percent"/>
+                <button name="discount_distribution_button"
+                        string="Distribute Discount"
+                        type="object"
+                        class="btn-primary"/>
+<!--                     invisible="['|', ('discount_percent', '&gt;', 100), ('discount_percent', '&lt;', 0)]"-->
+
+            </field>
+        </field>
+    </record>
+</odoo>

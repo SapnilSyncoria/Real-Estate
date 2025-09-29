@@ -1,0 +1,25 @@
+<odoo>
+
+
+    <!-- Form view for Property Types -->
+    <record id="view_property_tag_form" model="ir.ui.view">
+        <field name="name">estate.property.tag.form</field>
+        <field name="model">estate.property.tag</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <!-- Make field bigger and hide label -->
+                        <field name="tag_estate_properties" class="oe_edit_only o_text_bold"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+        <!-- Action -->
+    <record id="estate_property_action3" model="ir.actions.act_window">
+        <field name="name">Property Tags</field>
+        <field name="res_model">estate.property.tag</field>
+        <field name="view_mode">form</field>
+    </record>
+</odoo>

@@ -1,0 +1,21 @@
+<odoo>
+
+    <!-- Root Menu -->
+    <menuitem id="estate_menu_root" name="Real Estate Bipro"/>
+
+    <!-- First Level Menu -->
+    <menuitem id="estate_first_level_menu" name="Not A Properties" parent="estate_menu_root">
+
+        <!-- Action Menu for the Not a properties -->
+        <menuitem id="estate_menu_property_action" action="estate_property_action"/>
+    </menuitem>
+    <!-- First Level Menu 2-->
+    <menuitem id="estate_first_level_menu2" name="Settings" parent="estate_menu_root">
+
+        <!-- Action Menu for the Not a properties -->
+        <menuitem id="estate_menu_property_type_action" action="estate_property_action2"/>
+        <menuitem id="estate_menu_property_tag_action" action="estate_property_action3"/>
+    </menuitem>
+
+
+</odoo>
