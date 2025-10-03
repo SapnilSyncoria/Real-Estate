@@ -1,7 +1,5 @@
-"# Real-Estate" 
-"# Real-Estate" 
 
-Real Estate Bipro — Odoo Customization Suite
+Real Estate — Odoo Customization Suite
 
 
 This project is a comprehensive Odoo application for real-estate management, enriched with customizations in sales, invoicing, accounting, products, and security.
